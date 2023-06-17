@@ -22,6 +22,8 @@ namespace Hangman_App
     {
         public MainWindow()
         {
+            Word word = new Word();
+            Board.Text = word.getBoard();
             InitializeComponent();
         }
 

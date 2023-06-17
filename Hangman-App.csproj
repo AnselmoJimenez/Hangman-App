@@ -105,7 +105,9 @@
   <ItemGroup>
     <Resource Include="Assets\Logo\logo.v2.inv_rmvbg.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\words.txt" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Character\1.png" />
     <Resource Include="Assets\Character\2.png" />
