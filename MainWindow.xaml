@@ -40,7 +40,8 @@
                 <RowDefinition Height="64"/>
             </Grid.RowDefinitions>
 
-            <Image Source="./Assets/Character/default.png"
+            <Image x:Name="character"
+                   Source="./Assets/Character/default.png"
                    Grid.Column="1"
                    Grid.Row="0"/>
 

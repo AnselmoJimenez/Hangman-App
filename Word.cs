@@ -22,7 +22,8 @@ namespace Hangman_App
         {
             // Choose random line from the text file
             Random random = new Random();
-            string[] words = File.ReadAllLines("./Assets/words.txt");
+            Console.WriteLine(File.Exists("./words.txt"));
+            string[] words = File.ReadAllLines("./words.txt");
 
             return words[random.Next(words.Length)];
         }

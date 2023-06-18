@@ -106,9 +106,6 @@
     <Resource Include="Assets\Logo\logo.v2.inv_rmvbg.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\words.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\Character\1.png" />
     <Resource Include="Assets\Character\2.png" />
     <Resource Include="Assets\Character\3.png" />
@@ -116,6 +113,11 @@
     <Resource Include="Assets\Character\5.png" />
     <Resource Include="Assets\Character\6.png" />
     <Resource Include="Assets\Character\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="words.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
