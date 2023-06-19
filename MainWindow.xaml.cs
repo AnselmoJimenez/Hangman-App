@@ -20,19 +20,37 @@ namespace Hangman_App
     /// </summary>
     public partial class MainWindow : Window
     {
+        Word word = new Word();
+        Attempts attempts = new Attempts();
+        public char guess { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
-            Word word = new Word();
             Board.Text = word.getBoard().ToString();
         }
 
         private void Click(object sender, RoutedEventArgs e)
         {
             Button clickedButton = (Button) sender;
-            string buttonContent = clickedButton.Content.ToString();
+            char buttonContent = clickedButton.Content.ToString().ToLower()[0];
 
-            Console.WriteLine($"Clicked {buttonContent}");
+            guess = buttonContent;
+
+            //clickedButton.IsHitTestVisible = false;
+            if (word.updateBoard(guess)) 
+            {
+                // Change the button pressed to green and update the board
+                Console.WriteLine("In word.");
+                clickedButton.Style = (Style) Resources["CorrectGuessStyle"];
+                Board.Text = word.getBoard().ToString();
+            }
+            else
+            {
+                // Change to onyx and increment the amount of wrong guesses and update picture
+                Console.WriteLine("Not in word.");
+                clickedButton.Style = (Style) FindResource("WrongGuessStyle");
+            }
         }
     }
 }

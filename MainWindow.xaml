@@ -21,7 +21,9 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="./Styles/KeyboardButton.xaml"/>
+                <ResourceDictionary Source="./Styles/DefaultButton.xaml"/>
+                <ResourceDictionary Source="./Styles/CorrectGuess.xaml"/>
+                <ResourceDictionary Source="./Styles/WrongGuess.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -55,33 +57,33 @@
                        VerticalAlignment="Center" 
                        HorizontalAlignment="Center" 
                        Grid.Row="2" Grid.Column="1">
-                <Button x:Name="A" Content="A" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="B" Content="B" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="C" Content="C" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="D" Content="D" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="E" Content="E" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="F" Content="F" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="G" Content="G" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="H" Content="H" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="I" Content="I" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="J" Content="J" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="K" Content="K" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="L" Content="L" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="M" Content="M" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="N" Content="N" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="O" Content="O" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="P" Content="P" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="Q" Content="Q" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="R" Content="R" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="S" Content="S" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="T" Content="T" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                <Button x:Name="U" Content="U" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
+                <Button x:Name="A" Content="A" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="B" Content="B" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="C" Content="C" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="D" Content="D" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="E" Content="E" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="F" Content="F" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="G" Content="G" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="H" Content="H" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="I" Content="I" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="J" Content="J" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="K" Content="K" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="L" Content="L" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="M" Content="M" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="N" Content="N" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="O" Content="O" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="P" Content="P" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="Q" Content="Q" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="R" Content="R" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="S" Content="S" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="T" Content="T" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                <Button x:Name="U" Content="U" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
                 <StackPanel Margin="40, 0, 0, 0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button x:Name="V" Content="V" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                    <Button x:Name="W" Content="W" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                    <Button x:Name="X" Content="X" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                    <Button x:Name="Y" Content="Y" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
-                    <Button x:Name="Z" Content="Z" Click="Click" Style="{StaticResource KeyboardButtonStyle}"/>
+                    <Button x:Name="V" Content="V" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                    <Button x:Name="W" Content="W" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                    <Button x:Name="X" Content="X" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                    <Button x:Name="Y" Content="Y" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                    <Button x:Name="Z" Content="Z" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
                 </StackPanel>
             </WrapPanel>
 
