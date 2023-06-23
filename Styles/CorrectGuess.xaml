@@ -9,27 +9,33 @@
         <Setter Property="Margin" Value="4"/>
         <Setter Property="Foreground" Value="#808080"/>
         <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#38DDB1"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="ButtonContent">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonContent"
+                                    Property="Background"
+                                    Value="#38DDB1"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
 
         <Style.Resources>
 
             <Style TargetType="Border">
                 <Setter Property="CornerRadius" Value="5"/>
             </Style>
-            
+
         </Style.Resources>
 
-        <Style.Triggers>
-            
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Cursor" Value="Hand"/>
-            </Trigger>
-            
-            <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Background" Value="#38DDB1"/>
-            </Trigger>
-            
-        </Style.Triggers>
-        
     </Style>
 
 </ResourceDictionary>

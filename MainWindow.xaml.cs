@@ -32,25 +32,41 @@ namespace Hangman_App
 
         private void Click(object sender, RoutedEventArgs e)
         {
+            BitmapImage img = new BitmapImage();
             Button clickedButton = (Button) sender;
-            char buttonContent = clickedButton.Content.ToString().ToLower()[0];
 
+            // Get guess (letter pressed)
+            char buttonContent = clickedButton.Content.ToString().ToLower()[0];
             guess = buttonContent;
 
             //clickedButton.IsHitTestVisible = false;
             if (word.updateBoard(guess)) 
             {
                 // Change the button pressed to green and update the board
-                Console.WriteLine("In word.");
                 clickedButton.Style = (Style) Resources["CorrectGuessStyle"];
                 Board.Text = word.getBoard().ToString();
             }
             else
             {
                 // Change to onyx and increment the amount of wrong guesses and update picture
-                Console.WriteLine("Not in word.");
-                clickedButton.Style = (Style) FindResource("WrongGuessStyle");
+                clickedButton.Style = (Style) Resources["WrongGuessStyle"];
+
+                attempts.incorrect();
+                string imgPath = "./Assets/Character/" + attempts.wrongGuesses.ToString() + ".png";
+                character.Source = newImage(imgPath);
+                
             }
+            clickedButton.IsEnabled = false;
+        }
+
+        private BitmapImage newImage(string path)
+        {
+            BitmapImage img = new BitmapImage();
+            img.BeginInit();
+            img.UriSource = new Uri(path, UriKind.Relative);
+            img.EndInit();
+
+            return img;
         }
     }
 }
