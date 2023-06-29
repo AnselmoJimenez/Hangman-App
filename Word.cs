@@ -9,7 +9,7 @@ namespace Hangman_App
 {
     internal class Word
     {
-        private string word { get; }
+        private string word { set; get; }
         private char[] board;
         public Word() 
         {
@@ -38,6 +38,8 @@ namespace Hangman_App
             }
         }
 
+        public string getWord() { return this.word; }
+
         public string getBoard() 
         {
             string result = "";
@@ -64,6 +66,19 @@ namespace Hangman_App
             }
 
             return true;
+        }
+
+        public bool checkBoard()
+        {
+            if (this.board.Contains('_')) { return false; }
+            else                          { return true;  }
+        }
+
+        public void reset()
+        {
+            this.word = generateWord();
+            this.board = new char[this.word.Length];
+            generateBoard();
         }
     }
 }

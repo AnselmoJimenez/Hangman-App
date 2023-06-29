@@ -53,10 +53,12 @@
                        HorizontalAlignment="Center" 
                        Grid.Row="1" Grid.ColumnSpan="3"/>
 
-            <WrapPanel Orientation="Horizontal" 
+            <WrapPanel x:Name="keyboard"
+                       Orientation="Horizontal" 
                        VerticalAlignment="Center" 
                        HorizontalAlignment="Center" 
                        Grid.Row="2" Grid.Column="1">
+                
                 <Button x:Name="A" Content="A" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
                 <Button x:Name="B" Content="B" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
                 <Button x:Name="C" Content="C" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
@@ -78,14 +80,85 @@
                 <Button x:Name="S" Content="S" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
                 <Button x:Name="T" Content="T" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
                 <Button x:Name="U" Content="U" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                
                 <StackPanel Margin="40, 0, 0, 0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    
                     <Button x:Name="V" Content="V" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
                     <Button x:Name="W" Content="W" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
                     <Button x:Name="X" Content="X" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
                     <Button x:Name="Y" Content="Y" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
                     <Button x:Name="Z" Content="Z" Click="Click" Style="{StaticResource DefaultButtonStyle}"/>
+                    
                 </StackPanel>
+                
             </WrapPanel>
+
+            <TextBlock x:Name="winMessage"
+                       Text="You Win!"
+                       FontWeight="Normal"
+                       FontSize="16"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Center"
+                       Grid.Row="2" Grid.Column="1"
+                       Foreground="#38DDB1"
+                       Visibility="Collapsed"/>
+
+            <StackPanel x:Name="lossPanel"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Grid.Row="2" Grid.Column="1"
+                        Visibility="Collapsed">
+
+                <TextBlock x:Name="loseMessage"
+                           Text="The word was "
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Center"
+                           Foreground="#FFFFFF"
+                           FontSize="16"
+                           FontWeight="Normal"/>
+
+                <TextBlock x:Name="correctWord"
+                           Text=""
+                           FontSize="16"
+                           FontWeight="Normal"
+                           Foreground="#38DDB1"
+                           VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel x:Name="playAgainPanel"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="2" Grid.Column="1"
+                        Visibility="Collapsed">
+                
+                <TextBlock Text="Play Again?"
+                           HorizontalAlignment="Center"
+                           FontSize="24"
+                           FontWeight="Normal"/>
+                
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center" VerticalAlignment="Center">
+                    
+                    <Button x:Name="yesButton" 
+                            Content="Yes"
+                            Click="resetGame"
+                            FontWeight="Normal" 
+                            Height="32" Width="124" 
+                            Style="{StaticResource DefaultButtonStyle}"/>
+                    
+                    <Button x:Name="noButton" 
+                            Content="No"
+                            Click="quitGame"
+                            FontWeight="Normal" 
+                            Height="32" Width="124" 
+                            Style="{StaticResource DefaultButtonStyle}"/>
+           
+                </StackPanel>
+
+
+            </StackPanel>
+
 
             <Image Source="./Assets/Logo/logo.v2.inv.png" 
                    Grid.Column="1" 

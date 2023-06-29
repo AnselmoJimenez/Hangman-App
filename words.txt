@@ -1,6 +1,6 @@
 ﻿dominican republic
 renegade
-requests 
+requests
 marketplace
 larynx
 megahertz
@@ -23,7 +23,8 @@ croquet
 pneumonia
 dizzying
 daiquiri
-rhubarbrhythm
+rhubarb
+rhythm
 rickshaw
 sphinx
 foxglove
@@ -61,7 +62,6 @@ glowworm
 fixable
 fishhook
 espionage
-voyeurism
 triphthong
 rickshaw
 curacao
@@ -78,7 +78,8 @@ duplex
 equip
 exodus
 funny
-gossipkiosk
+gossip
+kiosk
 khaki
 lengths
 onyx
